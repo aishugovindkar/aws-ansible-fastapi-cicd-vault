@@ -19,10 +19,10 @@ jobs:
 
     - name: Copy code to EC2
       run: |
-        ssh -o StrictHostKeyChecking=no ubuntu@<EC2-IP> 'rm -rf ~/app && mkdir ~/app'
+        ssh -o StrictHostKeyChecking=no ubuntu@65.0.173.169 'rm -rf ~/app && mkdir ~/app'
         scp -o StrictHostKeyChecking=no -r ./app ubuntu@<EC2-IP>:~/app
 
     - name: Run Ansible Playbook
       run: |
-        scp -o StrictHostKeyChecking=no -r ./ansible ubuntu@<EC2-IP>:~/ansible
+        scp -o StrictHostKeyChecking=no -r ./ansible ubuntu@65.0.173.169:~/ansible
         ssh -o StrictHostKeyChecking=no ubuntu@<EC2-IP> 'cd ~/ansible && ansible-playbook -i inventory.ini playbook.yml'
