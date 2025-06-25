@@ -1,6 +1,7 @@
 # AWS FastAPI Deployment with Ansible, CI/CD & HashiCorp Vault
 
-![CI/CD](https://github.com/aishugovindkar/aws-ansible-fastapi-cicd-vault/actions/workflows/deploy.yaml/badge.svg)
+![CI/CD](https://github.com/aishugovindkar/aws-ansible-fastapi-cicd-vault/actions/workflows/deploy.yaml/badge.svg?branch=main)
+
 
 This project demonstrates an end-to-end DevOps pipeline where a containerized **FastAPI** application is automatically deployed to an **AWS EC2** instance using **GitHub Actions** (CI/CD), **Ansible** for provisioning, and **HashiCorp Vault** for secret management.
 
