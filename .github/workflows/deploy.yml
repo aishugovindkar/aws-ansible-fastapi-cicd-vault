@@ -25,4 +25,4 @@ jobs:
     - name: Run Ansible Playbook
       run: |
         scp -o StrictHostKeyChecking=no -r ./ansible ubuntu@65.0.173.169:~/ansible
-        ssh -o StrictHostKeyChecking=no ubuntu@<EC2-IP> 'cd ~/ansible && ansible-playbook -i inventory.ini playbook.yml'
+        ssh -o StrictHostKeyChecking=no ubuntu@65.0.173.169 'cd ~/ansible && ansible-playbook -i inventory.ini playbook.yml'
